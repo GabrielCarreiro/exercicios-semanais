@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+
+<body>
+    <script>
+
+        var vezes = 0;
+        var totalNotas = [];
+        var adicionarNota = true;
+
+        alert('Bem vindo ao sistema de média de notas');
+
+        var nota = parseInt(prompt('Digite uma nota'));
+        vezes++;
+        totalNotas.push(nota);
+
+        while (adicionarNota) {
+            var resposta = prompt('Deseja adicionar outra nota ?')
+
+            if (resposta.toLowerCase() == 'sim') {
+                var nota = parseInt(prompt('Digite uma nota'));
+                vezes++;
+                totalNotas.push(nota);
+            } else {
+                adicionarNota = false;
+            }
+
+        }
+
+
+        var total = 0;
+        var numeros = totalNotas;
+        for (var i = 0; i < numeros.length; i++) {
+            total += numeros[i];
+        }
+        var results = total / vezes;
+
+        document.write(`Você digitou as notas <br> <strong> ${totalNotas} </strong> <br> A média das notas é: <strong> ${results} </strong> <br>
+        E a soma de todas as notas é: <strong> ${total} </strong>`)
+
+
+
+
+    </script>
+</body>
+
+</html>

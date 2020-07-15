@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+
+<body>
+    <script>
+
+        var nome = prompt('Digite um nome ');
+        var altura = parseInt(prompt('Digite uma altura'));
+        var sexo = prompt('Digite o sexo da pessoa');
+        var pessoas = [
+            {
+                nome: nome,
+                altura: altura,
+                sexo: sexo
+            }
+
+        ];
+
+        var nome = prompt('Digite um nome ');
+        var altura = parseInt(prompt('Digite uma altura'));
+        var sexo = prompt('Digite o sexo da pessoa');
+        pessoas.push({ nome: nome, altura: altura, sexo: sexo });
+
+        var nome = prompt('Digite um nome ');
+        var altura = parseInt(prompt('Digite uma altura'));
+        var sexo = prompt('Digite o sexo da pessoa');
+        pessoas.push({ nome: nome, altura: altura, sexo: sexo });
+
+        var nome = prompt('Digite um nome ');
+        var altura = parseInt(prompt('Digite uma altura'));
+        var sexo = prompt('Digite o sexo da pessoa');
+        pessoas.push({ nome: nome, altura: altura, sexo: sexo });
+
+        var nome = prompt('Digite um nome ');
+        var altura = parseInt(prompt('Digite uma altura'));
+        var sexo = prompt('Digite o sexo da pessoa');
+        pessoas.push({ nome: nome, altura: altura, sexo: sexo });
+
+        var totalHomens = 0;
+        var totalmulheres = 0;
+        var tamanho = [];
+        function status(pessoas) {
+            for (const pessoa of pessoas) {
+                var tipo = pessoa.sexo;
+                var name = pessoa.nome;
+                tamanho.push(pessoa.altura)
+
+                if (tipo.toLowerCase() == 'm') {
+                    totalHomens++
+                } else {
+                    totalmulheres++
+                }
+            }
+
+        }
+
+        status(pessoas);
+
+        var results = tamanho.reduce(function (a, b) {
+            return Math.max(a, b);
+        });
+
+        document.write(` O total de mulheres é ${totalmulheres} <br>
+        O total de homens é ${totalHomens} <br> A maior altura é ${results}`)
+
+    </script>
+</body>
+
+</html>

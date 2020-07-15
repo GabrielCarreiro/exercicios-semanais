@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+
+<body>
+    <script>
+
+        var adicionarNome = true;
+
+        while (adicionarNome) {
+            var nome = prompt('Digite o nome');
+            var idade = parseInt(prompt('Digite uma idade'));
+            if (idade < 18) {
+                document.write(nome + ' É menor de idade <br>')
+            } else {
+                document.write(nome + ' É maior de idade <br>')
+            }
+
+            var resposta = prompt('Deseja inserir outra pessoa ? sim ou nao ?')
+
+            if (resposta.toLocaleLowerCase() == 'sim') {
+                var nome = prompt('Digite o nome');
+                var idade = parseInt(prompt('Digite uma idade'));
+                if (idade < 18) {
+                    document.write(nome + ' É menor de idade <br>')
+                } else {
+                    document.write(nome + ' É maior de idade <br>')
+                }
+            }else{
+                adicionarNome = false;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

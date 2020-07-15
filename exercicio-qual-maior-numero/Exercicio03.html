@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+
+<body>
+    <script>
+
+        var numeros = [];
+        var adicionarNumero = true;
+
+        var valor = parseInt(prompt('Digite um numero'))
+        numeros.push(valor);
+
+        var valor = parseInt(prompt('Digite um numero'))
+        numeros.push(valor);
+
+        var valor = parseInt(prompt('Digite um numero'))
+        numeros.push(valor);
+
+        var valor = parseInt(prompt('Digite um numero'))
+        numeros.push(valor);
+
+        var valor = parseInt(prompt('Digite um numero'))
+        numeros.push(valor);
+
+    
+        var results = numeros.reduce(function (a, b) {
+            return Math.max(a, b);
+        });
+
+        document.write(' O maior numero que você digitou foi ' + results)
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>
